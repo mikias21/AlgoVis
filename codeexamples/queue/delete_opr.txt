@@ -1,0 +1,10 @@
+# Function to remove first element and return the element from the queue
+    def dequeue(self):
+
+        if self.head is None:
+            return None
+        else:
+            temp= self.head.data
+            self.head = self.head.next
+            self.head.prev=None
+            return temp

@@ -1,0 +1,9 @@
+# Function to add an element data in the Queue
+    def enqueue(self, data):
+        if self.last is None:
+            self.head =Node(data)
+            self.last =self.head
+        else:
+            self.last.next = Node(data)
+            self.last.next.prev=self.last
+            self.last = self.last.next

@@ -1,0 +1,14 @@
+ def add_list_item(self, item):
+        "add an item at the end of the list"
+
+        if not isinstance(item, ListNode):
+            item = ListNode(item)
+
+        if self.head is None:
+            self.head = item
+        else:
+            self.tail.next = item
+
+        self.tail = item
+
+        return
